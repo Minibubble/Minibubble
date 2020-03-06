@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<iostream>
+int main()
+{printf("请分别输入出生年,测试年,1月1日至生日数，1月1日至测定日数");
+int a,b,c,e,f;
+scanf("%d %d %d %d",&a,&b,&e,&f);
+if(a%4==0) c=(b-a+4)/4;
+else	if(a%4==1)  c=(b-a+3)/4;
+else   if(a%4==2)  c=(b-a+2)/4;
+	   else   c=(b-a+1)/4+1;
+printf("体力为%d。\n",(((b-a)*365)+c-e+f)%23);//c为闰年数，e为1.1到生日天数，f为1.1到测定天数
+printf("情绪为%d。\n",(((b-a)*365)+c-e+f)%28);
+printf("智力为%d。\n",(((b-a)*365)+c-e+f)%33);
+system("pause");
+return 0;
+}
